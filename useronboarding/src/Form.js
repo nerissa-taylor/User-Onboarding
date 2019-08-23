@@ -15,21 +15,21 @@ const UserForm = ({ errors, touched, values, status }) => {
     return (
         <div className="user-form">
             <Form>
-                <Field type="text" name="name" placeholder="Name" />
+                <Field type="text" name="name" placeholder="Name" className="name" />
                 {touched.name && errors.name && (
                     <p className="error">{errors.name}</p>)}
 
-                <Field type="email" name="email" placeholder="Email" />
+                <Field type="email" name="email" placeholder="Email" className="email" />
                 {touched.email && errors.email && (
                     <p className="error">{errors.email}</p>)}
 
-                <Field type="password" name="password" placeholder="Password" />
+                <Field type="password" name="password" placeholder="Password" className="password" />
                 {touched.password && errors.password && (
                     <p className="error">{errors.password}</p>)}
 
                 <label className="checkbox-container">
                     Terms of Service
-            <Field type="checkbox" name="termsofService" checked={values.termsofService} />
+            <Field type="checkbox" name="termsofService" className="checkbox" checked={values.termsofService} />
                 </label>
                 <button type="submit">Submit!</button>
             </Form>
